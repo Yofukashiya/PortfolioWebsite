@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import photo from "../../../assets/images/Photo.webp";
 import { FlexWrapper } from "../../../components/FlexWrapper";
@@ -6,7 +5,7 @@ import { Container } from "../../../components/Container";
 
 export const Main = () => {
 	return (
-		<div>
+		<StyledMain>
 			<Container>
 				<FlexWrapper
 					direction="row"
@@ -23,12 +22,18 @@ export const Main = () => {
 					</div>
 				</FlexWrapper>
 			</Container>
-		</div>
+		</StyledMain>
 	);
 };
+
+const StyledMain = styled.section`
+	background-color: rgb(122, 195, 213);
+	height: 100vh;
+`;
 
 const StyledImg = styled.img`
 	width: 350px;
 	height: 430px;
 	object-fit: cover;
+	display: block;
 `;
