@@ -44,6 +44,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
     color: ${Theme.color.font};
+    line-height: 1.2;
 }
 
 h1,
