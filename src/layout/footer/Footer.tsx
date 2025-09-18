@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { Icon } from "../../components/icon/Icon";
+import { Theme } from "../../styles/Theme";
 
 export const Footer = () => {
 	return (
@@ -61,7 +62,7 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
-	background-color: rgb(65, 161, 168);
+	background-color: ${Theme.color.primaryBg};
 	min-height: 30vh;
 `;
 
