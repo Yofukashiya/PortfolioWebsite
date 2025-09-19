@@ -73,6 +73,10 @@ button {
     cursor: pointer;
 }
 
+section {
+    padding: 100px 0;
+}
+
 section:nth-of-type(odd) {
     background-color: ${Theme.color.primaryBg};
 }

@@ -46,6 +46,4 @@ export const Skills = () => {
 	);
 };
 
-const StyledSkills = styled.section`
-	background-color: rgb(211, 221, 142);
-`;
+const StyledSkills = styled.section``;
