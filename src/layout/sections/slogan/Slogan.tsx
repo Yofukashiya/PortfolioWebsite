@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Container } from "../../../components/Container";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { SectionTitle } from "../../../components/SectionTitle";
-import { StyledButton } from "../../../components/Button";
+import { Button } from "../../../components/Button";
 
 export const Slogan = () => {
 	return (
@@ -10,7 +10,7 @@ export const Slogan = () => {
 			<Container>
 				<FlexWrapper direction="column" align="center">
 					<SectionTitle>I Am Available For Freelance</SectionTitle>
-					<StyledButton>Hire me</StyledButton>
+					<Button>Hire me</Button>
 				</FlexWrapper>
 			</Container>
 		</StyledSlogan>
