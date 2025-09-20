@@ -3,6 +3,7 @@ import { Container } from "../../../components/Container";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Button } from "../../../components/Button";
+import { Theme } from "../../../styles/Theme";
 
 export const Contacts = () => {
 	return (
@@ -34,23 +35,39 @@ export const Contacts = () => {
 	);
 };
 
-const StyledContacts = styled.section`
-	background-color: rgb(139, 133, 133);
-	min-height: 50vh;
-`;
+const StyledContacts = styled.section``;
 
 const StyledForm = styled.form`
 	max-width: 540px;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	gap: 16px;
 
-	${Button} {
-		align-self: center;
+	textarea {
+		resize: none;
+		height: 155px;
 	}
 `;
 
 const StyledInput = styled.input`
 	width: 100%;
+	border: 1px solid #4a4a4a;
+	background-color: ${Theme.color.secondaryBg};
+	padding: 7px 15px;
+	font-family: "Poppins", sans-serif;
+	color: ${Theme.color.font};
+
+	&::placeholder {
+		font-weight: 400;
+		font-size: 12px;
+		letter-spacing: 0.05em;
+		color: #495057;
+	}
+
+	&:focus-visible {
+		outline: none;
+		border: 1px solid ${Theme.color.accent};
+	}
 `;

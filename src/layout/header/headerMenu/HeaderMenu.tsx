@@ -8,7 +8,7 @@ export const HeaderMenu = (props: { menuItems: Array<string> }) => {
 				{props.menuItems.map((item, index) => {
 					return (
 						<ListItem key={index}>
-							<Link href="">
+							<Link href={`#${item.toLowerCase()}`}>
 								{item}
 								<Mask>
 									<span>{item}</span>
@@ -37,6 +37,20 @@ const Link = styled.a`
 	font-weight: 700;
 	font-size: 24px;
 	color: transparent;
+	position: relative;
+	display: inline-block;
+
+	&:focus {
+		outline: 2px solid ${Theme.color.accent};
+		outline-offset: 4px;
+		border-radius: 4px;
+	}
+
+	&:focus-visible {
+		outline: 2px solid ${Theme.color.accent};
+		outline-offset: 4px;
+		border-radius: 4px;
+	}
 `;
 
 const Mask = styled.span`
@@ -47,6 +61,7 @@ const Mask = styled.span`
 	height: 50%;
 	overflow: hidden;
 	color: ${Theme.color.accent};
+	pointer-events: none;
 
 	& + & {
 		top: 50%;
@@ -73,7 +88,8 @@ const ListItem = styled.li`
 		transform: scale(0);
 	}
 
-	&:hover {
+	&:hover,
+	&:focus-within {
 		&::before {
 			transform: scale(1);
 		}
