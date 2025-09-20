@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Container } from "../../../components/Container";
 import { SectionTitle } from "../../../components/SectionTitle";
-import { Menu } from "../../../components/menu/Menu";
+import { TabMenu } from "./tabMenu/TabMenu";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Work } from "./work/Work";
 
@@ -15,7 +15,7 @@ export const Works = () => {
 		<StyledWorks>
 			<Container>
 				<SectionTitle>My Works</SectionTitle>
-				<Menu menuItems={workItems} />
+				<TabMenu menuItems={workItems} />
 				<FlexWrapper justify="space-between" align="flex-start">
 					<Work
 						src={socialProjectImg}
@@ -33,7 +33,4 @@ export const Works = () => {
 	);
 };
 
-const StyledWorks = styled.section`
-	background-color: rgb(234, 150, 189);
-	min-height: 100vh;
-`;
+const StyledWorks = styled.section``;

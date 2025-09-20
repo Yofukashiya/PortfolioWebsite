@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Container } from "../../../components/Container";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { FlexWrapper } from "../../../components/FlexWrapper";
-import { StyledButton } from "../../../components/Button";
+import { Button } from "../../../components/Button";
 
 export const Contacts = () => {
 	return (
@@ -26,9 +26,7 @@ export const Contacts = () => {
 							placeholder={"Message"}
 							name={"message"}
 						/>
-						<StyledButton type={"submit"}>
-							Send message
-						</StyledButton>
+						<Button type={"submit"}>Send message</Button>
 					</StyledForm>
 				</FlexWrapper>
 			</Container>
@@ -47,6 +45,10 @@ const StyledForm = styled.form`
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
+
+	${Button} {
+		align-self: center;
+	}
 `;
 
 const StyledInput = styled.input`

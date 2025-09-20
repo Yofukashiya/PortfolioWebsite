@@ -56,6 +56,24 @@ h6 {
     font-family: "Josefin Sans", sans-serif;
 }
 
+h3 {
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.06em;
+    color: ${Theme.color.font};
+}
+
+p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.4;
+    color: ${Theme.color.font};
+}
+
+img {
+    display: block;
+}
+
 a {
     text-decoration: none;
     color: inherit;

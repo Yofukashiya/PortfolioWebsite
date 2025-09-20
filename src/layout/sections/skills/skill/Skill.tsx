@@ -40,17 +40,10 @@ const IconWrapper = styled.div`
 	transform-origin: top left;
 `;
 const SkillTitle = styled.h3`
-	font-weight: 700;
-	font-size: 16px;
-	letter-spacing: 0.06em;
 	text-transform: uppercase;
-	color: #fff;
 	margin-bottom: 15px;
 	margin-top: 70px;
 `;
 const SkillDescription = styled.p`
-	font-weight: 400;
-	font-size: 14px;
 	text-align: center;
-	color: #fff;
 `;
