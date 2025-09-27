@@ -3,6 +3,7 @@ import photo from "../../../assets/images/Photo.webp";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
 import { Theme } from "../../../styles/Theme";
+import { font } from "../../../styles/Common";
 
 export const Main = () => {
 	return (
@@ -11,7 +12,9 @@ export const Main = () => {
 				<FlexWrapper
 					direction="row"
 					align="center"
-					justify="space-between"
+					justify="space-around"
+					wrap="wrap"
+					gap="20px"
 				>
 					<div>
 						<SmallText>Hi There, 👋</SmallText>
@@ -35,13 +38,6 @@ const StyledMain = styled.section`
 	display: flex;
 `;
 
-const StyledImg = styled.img`
-	width: 350px;
-	height: 430px;
-	object-fit: cover;
-	display: block;
-`;
-
 const SmallText = styled.span`
 	display: block;
 	font-weight: 400;
@@ -50,15 +46,27 @@ const SmallText = styled.span`
 `;
 
 const Name = styled.h2`
-	font-weight: 700;
-	font-size: 50px;
+	${font({
+		fontFamily: "Josefin Sans",
+		weight: 700,
+		color: Theme.color.font,
+		lineHeight: 1.2,
+		Fmin: 36,
+		Fmax: 50,
+	})}
 	letter-spacing: 0.05em;
 	text-align: left;
 	margin: 10px 0;
 
+	@media ${Theme.media.mobile} {
+		margin-top: 15px;
+		margin-bottom: 20px;
+	}
+
 	span {
 		position: relative;
 		z-index: 1;
+		white-space: nowrap;
 
 		&::before {
 			content: "";
@@ -74,17 +82,22 @@ const Name = styled.h2`
 `;
 
 const MainTitle = styled.h1`
-	font-weight: 400;
-	font-size: 27px;
+	${font({ weight: 400, Fmin: 20, Fmax: 27 })}
 	text-align: left;
 `;
 
 const PhotoWrapper = styled.div`
 	position: relative;
 	z-index: 1;
+	margin-right: 25px;
+
+	@media screen and (max-width: 842px) {
+		margin-top: 45px;
+	}
 
 	&::before {
 		content: "";
+		display: block;
 		position: absolute;
 		top: -24px;
 		left: 24px;
@@ -92,5 +105,24 @@ const PhotoWrapper = styled.div`
 		height: 470px;
 		border: 5px solid ${Theme.color.accent};
 		z-index: -1;
+
+		@media ${Theme.media.mobile} {
+			width: 314px;
+			height: 414px;
+			top: -15px;
+			left: 3px;
+		}
+	}
+`;
+
+const StyledImg = styled.img`
+	width: 350px;
+	height: 430px;
+	object-fit: cover;
+	display: block;
+
+	@media ${Theme.media.mobile} {
+		width: 310px;
+		height: 380px;
 	}
 `;
