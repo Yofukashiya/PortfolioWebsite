@@ -8,10 +8,23 @@ import { Theme } from "../../../styles/Theme";
 
 import socialProjectImg from "../../../assets/images/proj-1.webp";
 import timerProjectImg from "../../../assets/images/proj-2.webp";
+import React from "react";
 
 const workItems = ["all", "landing page", "react", "spa"];
+const workData = [
+	{
+		src: socialProjectImg,
+		title: "Social Network",
+		text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+	},
+	{
+		src: timerProjectImg,
+		title: "Timer",
+		text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enim",
+	},
+];
 
-export const Works = () => {
+export const Works: React.FC = () => {
 	return (
 		<StyledWorks>
 			<Container>
@@ -22,16 +35,16 @@ export const Works = () => {
 					align="flex-start"
 					gap="30px"
 				>
-					<Work
-						src={socialProjectImg}
-						title="Social Network"
-						text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-					/>
-					<Work
-						src={timerProjectImg}
-						title="Timer"
-						text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enim"
-					/>
+					{workData.map((work, index) => {
+						return (
+							<Work
+								src={work.src}
+								title={work.title}
+								text={work.text}
+								key={index}
+							/>
+						);
+					})}
 				</FlexWrapper>
 			</Container>
 		</StyledWorks>

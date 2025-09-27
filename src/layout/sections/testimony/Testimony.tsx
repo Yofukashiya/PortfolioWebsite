@@ -7,7 +7,7 @@ import { Slider } from "../../../components/slider/Slider";
 // IconWrapper from Skill_Style
 import { S } from "../skills/skill/Skill_Style";
 
-export const Testimony = () => {
+export const Testimony: React.FC = () => {
 	return (
 		<StyledTestimony>
 			<Container>
