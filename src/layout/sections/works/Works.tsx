@@ -4,6 +4,7 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { TabMenu } from "./tabMenu/TabMenu";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Work } from "./work/Work";
+import { Theme } from "../../../styles/Theme";
 
 import socialProjectImg from "../../../assets/images/proj-1.webp";
 import timerProjectImg from "../../../assets/images/proj-2.webp";
@@ -16,7 +17,11 @@ export const Works = () => {
 			<Container>
 				<SectionTitle>My Works</SectionTitle>
 				<TabMenu menuItems={workItems} />
-				<FlexWrapper justify="space-between" align="flex-start">
+				<FlexWrapper
+					justify="space-between"
+					align="flex-start"
+					gap="30px"
+				>
 					<Work
 						src={socialProjectImg}
 						title="Social Network"
@@ -33,4 +38,11 @@ export const Works = () => {
 	);
 };
 
-const StyledWorks = styled.section``;
+const StyledWorks = styled.section`
+	@media ${Theme.media.tablet} {
+		${FlexWrapper} {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+`;

@@ -45,20 +45,19 @@ const ImageWrapper = styled.div`
 	width: 100%;
 	heigh: 260px;
 
-	&:hover {
-		&::before {
-			content: "";
-			position: absolute;
-			left: 0;
-			right: 0;
-			top: 0;
-			bottom: 0;
-			backdrop-filter: blur(8px);
-			background: rgba(0, 0, 0, 0.3);
-		}
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		backdrop-filter: blur(8px);
+		background: rgba(0, 0, 0, 0.3);
+		opacity: 0;
 
-		${Button} {
-			display: block;
+		@media ${Theme.media.tablet} {
+			opacity: 1;
 		}
 	}
 
@@ -73,6 +72,20 @@ const ImageWrapper = styled.div`
 			width: 100%;
 			height: 100%;
 		}
+
+		@media ${Theme.media.tablet} {
+			display: block;
+		}
+	}
+
+	&:hover {
+		&::before {
+			opacity: 1;
+		}
+
+		${Button} {
+			display: block;
+		}
 	}
 `;
 
@@ -83,7 +96,17 @@ const Image = styled.img`
 `;
 
 const StyledWorkContent = styled.div`
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
 	padding: 25px 20px;
+
+	@media ${Theme.media.tablet} {
+		${FlexWrapper} {
+			flex-direction: row !important;
+			// align-items: flex-start !important;
+		}
+	}
 `;
 
 const Title = styled.h3`

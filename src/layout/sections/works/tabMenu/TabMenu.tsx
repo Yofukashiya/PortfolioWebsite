@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "../../../../components/Link";
+import { Theme } from "../../../../styles/Theme";
 
 export const TabMenu = (props: { menuItems: Array<string> }) => {
 	return (
@@ -24,6 +25,12 @@ const StyledTabMenu = styled.nav`
 		display: flex;
 		justify-content: center;
 		gap: 20px;
+	}
+
+	@media ${Theme.media.tablet} {
+		ul {
+			gap: 5px;
+		}
 	}
 `;
 
