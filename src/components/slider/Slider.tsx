@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { FlexWrapper } from "../FlexWrapper";
 import { Theme } from "../../styles/Theme";
 
-export const Slider = () => {
+export const Slider: React.FC = () => {
 	return (
 		<StyledSlider>
 			<FlexWrapper>

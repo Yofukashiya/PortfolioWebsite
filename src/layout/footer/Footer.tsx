@@ -22,7 +22,7 @@ const socialLinks = [
 	},
 ];
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
 	return (
 		<S.Footer>
 			<Container>
