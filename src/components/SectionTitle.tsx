@@ -1,14 +1,14 @@
 import styled from "styled-components";
 import { Theme } from "../styles/Theme";
+import { font } from "../styles/Common";
 
 export const SectionTitle = styled.h2`
+	${font({ weight: 600, Fmin: 30, Fmax: 36 })}
 	position: relative;
-	font-weight: 600;
-	font-size: 36px;
 	letter-spacing: 0.14em;
 	color: #fff;
 	text-align: center;
-	margin-bottom: 90px;
+	margin-bottom: 80px;
 
 	&::before {
 		content: "";
@@ -20,5 +20,11 @@ export const SectionTitle = styled.h2`
 		left: 50%;
 		transform: translateX(-50%);
 		bottom: -30px;
+	}
+
+	@media ${Theme.media.tablet} {
+		&::before {
+			bottom: -24px;
+		}
 	}
 `;

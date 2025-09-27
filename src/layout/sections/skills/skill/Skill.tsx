@@ -22,6 +22,11 @@ export const Skill = (props: SkillPropsType) => {
 const StyledSkill = styled.div`
 	width: 380px;
 	padding: 62px 20px 40px;
+
+	@media screen and (max-width: 842px) {
+		width: 330px;
+		padding: 42px 10px 30px;
+	}
 `;
 
 export const IconWrapper = styled.div`

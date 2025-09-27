@@ -93,6 +93,10 @@ button {
 
 section {
     padding: 100px 0;
+
+    @media ${Theme.media.tablet} {
+        padding: 80px 0;
+    }
 }
 
 section:nth-of-type(odd) {

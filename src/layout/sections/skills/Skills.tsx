@@ -9,7 +9,7 @@ export const Skills = () => {
 		<StyledSkills>
 			<Container>
 				<SectionTitle>My Skills</SectionTitle>
-				<FlexWrapper wrap="wrap" justify="space-between" align="center">
+				<FlexWrapper wrap="wrap" align="center" justify="center">
 					<Skill
 						iconId="html"
 						title="html5"

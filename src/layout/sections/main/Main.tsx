@@ -36,6 +36,10 @@ const StyledMain = styled.section`
 	background-color: rgb(122, 195, 213);
 	height: 100vh;
 	display: flex;
+
+	@media ${Theme.media.tablet} {
+		padding: 100px 0;
+	}
 `;
 
 const SmallText = styled.span`
